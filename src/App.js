@@ -40,7 +40,7 @@ function App() {
   function resetResult(e) {
   	// Add the code for the resetResult function
     e.preventDefault();
-    setResult((prevVal) => pevVal * 0);
+    setResult((prevVal) => prevVal * 0);
   };
 
   return (
