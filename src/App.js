@@ -8,41 +8,41 @@ function App() {
   const inputRef = useRef(null); 
   const resultRef = useRef(null); 
   const [result, setResult] = useState(0); 
- 
+
   function plus(e) {
     e.preventDefault();
     setResult((result) => result + Number(inputRef.current.value)); 
-  }; 
- 
+  };
+
   function minus(e) {
     e.preventDefault();
     setResult((result) => result - Number(inputRef.current.value));
   };
- 
+
   function times(e) {
     // Add the code for the multiply function 
     e.preventDefault(); 
     setResult((result) => result * Number(inputRef.current.value));
-  }; 
- 
+  };
+
   function divide(e) { 
     // Add the code for the divide function 
     e.preventDefault(); 
     setResult((result) => result / Number(inputRef.current.value));
   };
- 
+
   function resetInput(e) { 
     // Add the code for the resetInput function 
     e.preventDefault(); 
-    resetInput((inputRef) == null);
-  }; 
- 
-  function resetResult(e) { 
-  	// Add the code for the resetResult function 
-    e.preventDefault(); 
-    setResult((resultRef) == null);
-  }; 
- 
+    inputRef.current.value = 0;
+  };
+
+  function resetResult(e) {
+  	// Add the code for the resetResult function
+    e.preventDefault();
+    setResult((prevVal) => pevVal * 0);
+  };
+
   return (
     <div className="App">
       <div>
@@ -50,7 +50,7 @@ function App() {
       </div>
       <form>
         <p ref={resultRef}>
-          {/* add the value of the current total */}
+          {result}
         </p>
         <input
           pattern="[0-9]"
@@ -69,4 +69,4 @@ function App() {
   );
 }
 
-export default App; 
+export default App;
